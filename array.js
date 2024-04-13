@@ -18,3 +18,13 @@ profile["age"] = 43;
 var x = profile.length;
 var y = profile[0];
 console.log(y + "的年龄：" + x);
+
+//定义一个函数，用于判断表单字段fname是否存在
+function validateForm()
+{
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == null || x == "") {
+        alert("需要输入名字");
+        return false;
+    }
+}
