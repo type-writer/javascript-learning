@@ -10,11 +10,13 @@ interface TextChangedCallback {
 
 // TextBox类实现了TextChanger接口
 class TextBox implements TextChanger {
+    @SuppressWarnings("unused")
     private String text;
     private TextChangedCallback callback;  // TextChangedCallback是一个回调函数接口
 
     // TextBox的构造函数
     public TextBox(String text, TextChangedCallback callback) {
+        this.text = "";
         this.text = text;
         this.callback = callback;
     }
